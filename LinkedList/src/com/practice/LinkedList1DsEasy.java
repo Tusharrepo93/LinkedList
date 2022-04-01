@@ -1,9 +1,15 @@
 package com.practice;
 
-import java.util.HashMap;
 import java.util.HashSet;
 
-public class LinkedListNew {
+/**
+ * @author Tushar Linked List example
+ * printMiddleElementOfLinkedList
+ * deleteElementWhoseSumIsZero
+ * deleteMiddleOfLinkedList
+ * deleteDuplicatedElementFromSortedLinkedList
+ */
+public class LinkedList1DsEasy {
 
 	public static void main(String args[]) {
 		LinkedListCustom ls = new LinkedListCustom();
@@ -20,18 +26,17 @@ public class LinkedListNew {
 		System.out.println(ls.printMiddleElementOfLinkedList());
 		// ls.deleteElementWhoseSumIsZero();
 		// ls.printLinkedList();
-		
+
 		System.out.println();
-		ls.deleteDuplicatedElementFromSortedLinkedList();;
+		ls.deleteDuplicatedElementFromSortedLinkedList();
+		;
 		System.out.println();
-ls.printLinkedList();
+		ls.printLinkedList();
 		System.out.println();
 		ls.printLinkedList();
 		System.out.println();
 		ls.deleteMiddleOfLinkedList();
 		ls.printLinkedList();
-		
-		
 
 	}
 
@@ -50,6 +55,7 @@ class LinkedListCustom {
 		}
 	}
 
+	//Add elements To Linked List
 	public void addLast(int k) {
 		Node last = head;
 		if (last == null) {
@@ -64,6 +70,7 @@ class LinkedListCustom {
 
 	}
 
+	//Print Liked List Generic
 	public void printLinkedList() {
 		Node iterate = head;
 
@@ -128,17 +135,17 @@ class LinkedListCustom {
 		prev.next = tortoise.next;
 
 	}
-	
+
 	public void deleteDuplicatedElementFromSortedLinkedList() {
-		Node itr=head;
+		Node itr = head;
 		Node prev;
-		
-		while(itr!=null && itr.next!=null) {
-			prev=itr;
-			itr=itr.next;
-			if(prev.k==itr.k) {
-				prev.next=itr.next;
-				itr=prev;
+
+		while (itr != null && itr.next != null) {
+			prev = itr;
+			itr = itr.next;
+			if (prev.k == itr.k) {
+				prev.next = itr.next;
+				itr = prev;
 			}
 		}
 	}
